@@ -1,5 +1,7 @@
 FROM webdevops/php-apache-dev:7.2
 
+# https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-apache-dev.html#composer
+ENV COMPOSER_VERSION=1
 ENV COMPOSER_HOME=/.composer
 ENV WEB_DOCUMENT_ROOT=/var/www/shopware/shopware
 
@@ -11,7 +13,7 @@ COPY createuser.sh /addExternalUser
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1
 
-RUN apt-get update && apt-get install -y ant mysql-client
+RUN apt-get update && apt-get install -y ant default-mysql-client
 
 RUN chmod +x /usr/local/bin/wait-for-it.sh \
 && ln -s /app/psh.phar /bin/psh
