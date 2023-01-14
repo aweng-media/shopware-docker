@@ -45,13 +45,19 @@ This will download the latest release version of shopware and install it into /v
 
 If you want an older shopware version just add --sw-version to the init script:
 
-    $ ./psh.phar init --sw-version=5.2.26
+    $ ./psh.phar init --sw-version=5.7.16
 
 #### For plugin development
 
+> This does not work! I put fucking 6 hours into it trying to fix the dev environment.... but functions are called which don't exist since > 5.2. No alternative functions exist. From one error message to the next!
+>
+> Just use `init`... and that's it. (See above)
+> 
+> Dome
+
 For plugin development there is a script `init-vcs` to initialize and install shopware through github.  
 
-    $ ./psh.phar init-vcs --sw-branch=5.2
+    $ ./psh.phar init-vcs --sw-branch=5.7
 
 The plugin(s) you want to start development should be located in `./plugins` (Only new plugin system is supported). They can be installed and linked into the Shopware checkout by executing
 

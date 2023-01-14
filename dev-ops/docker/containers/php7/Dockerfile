@@ -1,7 +1,7 @@
-FROM webdevops/php-apache-dev:7.2
+FROM webdevops/php-apache-dev:7.4
 
 # https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-apache-dev.html#composer
-ENV COMPOSER_VERSION=1
+ENV COMPOSER_VERSION=2
 ENV COMPOSER_HOME=/.composer
 ENV WEB_DOCUMENT_ROOT=/var/www/shopware/shopware
 
