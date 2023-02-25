@@ -47,6 +47,17 @@ If you want an older shopware version just add --sw-version to the init script:
 
     $ ./psh.phar init --sw-version=5.7.16
 
+Add config to disable cache and force compile of template on every refresh:
+
+    // config.php
+    array(
+        ...
+        'template' => [
+            'forceCompile' => true,
+        ]
+        ...
+    )
+
 #### For plugin development
 
 > This does not work! I put fucking 6 hours into it trying to fix the dev environment.... but functions are called which don't exist since > 5.2. No alternative functions exist. From one error message to the next!
