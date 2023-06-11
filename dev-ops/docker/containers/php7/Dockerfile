@@ -9,6 +9,8 @@ COPY wait-for-it.sh /usr/local/bin/
 COPY php-config.ini /usr/local/etc/php/conf.d/
 COPY xdebug.ini /usr/local/etc/php/conf.d/
 COPY createuser.sh /addExternalUser
+RUN chmod +rwx /addExternalUser
+RUN /addExternalUser
 
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1

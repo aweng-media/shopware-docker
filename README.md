@@ -45,7 +45,9 @@ This will download the latest release version of shopware and install it into /v
 
 If you want an older shopware version just add --sw-version to the init script:
 
-    $ ./psh.phar init --sw-version=5.7.16
+    $ ./psh.phar init --sw-version=5.7.17
+
+If an error occurs during unzip and you are asked whether data should be overwritten, then the release is defective. Just choose another release.
 
 Add config to disable cache and force compile of template on every refresh:
 
